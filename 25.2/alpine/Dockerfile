@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.7 as dev
 
 RUN apk add --no-cache \
     alsa-lib-dev \
@@ -30,13 +30,22 @@ RUN apk add --no-cache \
     tiff-dev \
     && /bin/true
 
-COPY emacs-25.2 /opt/emacs/
+ENV EMACS_BRANCH="emacs-25.2"
+ENV EMACS_VERSION="25.2"
+
+COPY $EMACS_BRANCH /opt/emacs/
 COPY patches /opt/emacs/patches
+
 RUN cd /opt/emacs && \
     git apply patches/* && \
     ./autogen.sh && \
     ./configure && \
     make -j 8 install
+
+ENV PATH="/root/.cask/bin:$PATH"
+RUN curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+
+CMD ["emacs"]
 
 # ------------------------------------------------------------
 
