@@ -20,6 +20,10 @@
   branch: emacs-26.1
   template: alpine
   patches: alpine/patches/26+
+- tags: [26.1-alpine-dev, 26-alpine-dev, alpine-dev]
+  branch: emacs-26.1
+  template: alpine/dev
+  patches: alpine/patches/26+
 
 - tags: [25.3, 25]
   branch: emacs-25.3
