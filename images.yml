@@ -39,6 +39,10 @@
   branch: emacs-25.3
   template: alpine
   patches: alpine/patches/25
+- tags: [25.3-alpine-dev, 25-alpine-dev]
+  branch: emacs-25.3
+  template: alpine/dev
+  patches: alpine/patches/25
 
 - tags: [25.2]
   branch: emacs-25.2

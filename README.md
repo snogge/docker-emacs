@@ -22,6 +22,7 @@ This project provides different docker images:
 - `25.3`, `25` [(25.3/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/xenial/Dockerfile)
 - `25.3-dev`, `25-dev` [(25.3/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/xenial/dev/Dockerfile)
 - `25.3-alpine`, `25-alpine` [(25.3/alpine/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/Dockerfile)
+- `25.3-alpine-dev`, `25-alpine-dev` [(25.3/alpine/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/dev/Dockerfile)
 - `25.2` [(25.2/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/xenial/Dockerfile)
 - `25.2-dev` [(25.2/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/xenial/dev/Dockerfile)
 - `25.2-alpine` [(25.2/alpine/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/alpine/Dockerfile)
