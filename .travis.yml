@@ -23,6 +23,7 @@ env:
   - IMAGE_TAGS="25.2"                              IMAGE_DIRECTORY="25.2/xenial"                       GIT_BRANCH="emacs-25.2"
   - IMAGE_TAGS="25.2-dev"                          IMAGE_DIRECTORY="25.2/xenial/dev"                   GIT_BRANCH="emacs-25.2"
   - IMAGE_TAGS="25.2-alpine"                       IMAGE_DIRECTORY="25.2/alpine"                       GIT_BRANCH="emacs-25.2"
+  - IMAGE_TAGS="25.2-alpine-dev"                   IMAGE_DIRECTORY="25.2/alpine/dev"                   GIT_BRANCH="emacs-25.2"
   - IMAGE_TAGS="25.1"                              IMAGE_DIRECTORY="25.1/xenial"                       GIT_BRANCH="emacs-25.1"
   - IMAGE_TAGS="25.1-dev"                          IMAGE_DIRECTORY="25.1/xenial/dev"                   GIT_BRANCH="emacs-25.1"
   - IMAGE_TAGS="24.5 24"                           IMAGE_DIRECTORY="24.5/xenial"                       GIT_BRANCH="emacs-24.5"
