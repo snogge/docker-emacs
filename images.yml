@@ -9,6 +9,10 @@
   branch: master
   template: alpine
   patches: alpine/patches/26+
+- tags: [master-alpine-dev]
+  branch: master
+  template: alpine/dev
+  patches: alpine/patches/26+
 
 - tags: [26.1, 26, latest]
   branch: emacs-26.1
