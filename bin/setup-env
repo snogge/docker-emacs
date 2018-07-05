@@ -3,7 +3,9 @@
 TRAVIS_CACHE="$HOME/cache"
 GIT_REPOSITORY="git://git.sv.gnu.org/emacs.git"
 # TRAVIS_REPO_SLUG is owner_name/repo_name from github
-GITHUB_USER="$(echo $TRAVIS_REPO_SLUG | cut -d '/' -f 1 | tr '[:upper:]' '[:lower:]')"
+GITHUB_USER=${TRAVIS_REPO_SLUG%%/*}
+# The ,, expansion operator is bash-only
+GITHUB_USER=${GITHUB_USER,,}
 # If DOCKER_USERNAME is not set, use GITHUB_USER.
 DOCKER_REPOSITORY="${DOCKER_USERNAME:-GITHUB_USER}/emacs"
 PATH="$(pwd)/bin:$PATH"
