@@ -11,31 +11,14 @@ This project provides different docker images:
 
 ## Tags
 
-- `master` [(master/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/xenial/Dockerfile)
-- `master-dev` [(master/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/xenial/dev/Dockerfile)
-- `master-alpine` [(master/alpine/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/Dockerfile)
 - `master-alpine-dev` [(master/alpine/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/dev/Dockerfile)
-- `26.1`, `26`, `latest` [(26.1/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/xenial/Dockerfile)
-- `26.1-dev`, `26-dev`, `dev` [(26.1/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/xenial/dev/Dockerfile)
-- `26.1-alpine`, `26-alpine`, `alpine` [(26.1/alpine/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/alpine/Dockerfile)
 - `26.1-alpine-dev`, `26-alpine-dev`, `alpine-dev` [(26.1/alpine/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/alpine/dev/Dockerfile)
-- `25.3`, `25` [(25.3/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/xenial/Dockerfile)
-- `25.3-dev`, `25-dev` [(25.3/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/xenial/dev/Dockerfile)
-- `25.3-alpine`, `25-alpine` [(25.3/alpine/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/Dockerfile)
 - `25.3-alpine-dev`, `25-alpine-dev` [(25.3/alpine/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/dev/Dockerfile)
-- `25.2` [(25.2/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/xenial/Dockerfile)
-- `25.2-dev` [(25.2/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/xenial/dev/Dockerfile)
-- `25.2-alpine` [(25.2/alpine/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/alpine/Dockerfile)
 - `25.2-alpine-dev` [(25.2/alpine/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/alpine/dev/Dockerfile)
-- `25.1` [(25.1/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.1/xenial/Dockerfile)
 - `25.1-dev` [(25.1/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.1/xenial/dev/Dockerfile)
-- `24.5`, `24` [(24.5/xenial/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.5/xenial/Dockerfile)
 - `24.5-dev`, `24-dev` [(24.5/xenial/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.5/xenial/dev/Dockerfile)
-- `24.4` [(24.4/precise/autogen/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.4/precise/autogen/Dockerfile)
 - `24.4-dev` [(24.4/precise/autogen/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.4/precise/autogen/dev/Dockerfile)
-- `24.3` [(24.3/precise/autogen/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.3/precise/autogen/Dockerfile)
 - `24.3-dev` [(24.3/precise/autogen/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.3/precise/autogen/dev/Dockerfile)
-- `23.4`, `23` [(23.4/precise/bootstrap/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/23.4/precise/bootstrap/Dockerfile)
 - `23.4-dev`, `23-dev` [(23.4/precise/bootstrap/dev/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/23.4/precise/bootstrap/dev/Dockerfile)
 
 ## Usage
