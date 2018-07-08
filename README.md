@@ -14,6 +14,7 @@ This project provides different docker images:
 # Tags
 
 - `master-alpine-dev` [(master/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
+- `master-alpine-ci` [(master/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
 - `26.1-alpine-dev`, `26-alpine-dev`, `alpine-dev` [(26.1/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/alpine/3.7/Dockerfile)
 - `25.3-alpine-dev`, `25-alpine-dev` [(25.3/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/3.7/Dockerfile)
 - `25.2-alpine-dev` [(25.2/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/alpine/3.7/Dockerfile)

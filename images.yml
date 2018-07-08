@@ -15,6 +15,11 @@
   template: alpine/3.7
   patches: alpine/3.7/patches/26+
   target: dev
+- tags: [master-alpine-ci]
+  branch: master
+  template: alpine/3.7
+  patches: alpine/3.7/patches/26+
+  target: ci
 
 # - tags: [26.1, 26, latest]
 #   branch: emacs-26.1

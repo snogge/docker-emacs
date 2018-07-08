@@ -52,7 +52,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM alpine:3.7
+FROM alpine:3.7 as plain
 
 RUN apk add --no-cache \
         alsa-lib \
@@ -74,6 +74,12 @@ RUN apk add --no-cache \
 ENV EMACS_BRANCH="emacs-26.1"
 ENV EMACS_VERSION="26.1"
 
-COPY --from=0 /usr/local /usr/local
+COPY --from=dev /usr/local /usr/local
 
 CMD ["emacs"]
+
+# --------------------------------------------------------------
+
+FROM plain as ci
+
+RUN apk add --no-cache git make
