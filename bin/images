@@ -176,7 +176,7 @@ end
 def generate_readme(images)
   puts '>>> generating README.md'
   tags = images.map do |image|
-    format('- %s [(%s)](https://github.com/silex/docker-emacs/blob/master/%s)',
+    format('- %s [(%s)](https://github.com/snogge/docker-emacs/blob/master/%s)',
            image.tags.map(&:backquotify).join(', '),
            image.dockerfile,
            image.dockerfile)
