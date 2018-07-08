@@ -19,14 +19,14 @@ This project provides different docker images:
 ## Console
 
 ``` shell
-docker run -it --rm silex/emacs
+docker run -it --rm olanilsson/emacs
 ```
 
 ## GUI
 
 ``` shell
 xhost +local:root # WARN: this comes with security issues
-docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix silex/emacs
+docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix olanilsson/emacs
 ```
 
 # Alternatives
