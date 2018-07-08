@@ -60,7 +60,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM alpine:3.9
+FROM alpine:3.9 as plain
 
 RUN apk add --no-cache \
         alsa-lib \
@@ -88,3 +88,9 @@ COPY --from=0 /root/.emacs.d /root/.emacs.d
 COPY --from=0 /usr/local /usr/local
 
 CMD ["emacs"]
+
+# --------------------------------------------------------------
+
+FROM plain as ci
+
+RUN apk add --no-cache git make

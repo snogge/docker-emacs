@@ -21,6 +21,12 @@
   template: alpine/3.9
   configure: --with-modules
   target: dev
+- tags: [master-alpine-ci]
+  version: master
+  branch: master
+  template: alpine/3.9
+  configure: --with-modules
+  target: ci
 
 - tags: [27.0, 27]
   version: 27.0

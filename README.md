@@ -16,6 +16,7 @@ This project provides different docker images:
 - [`master-dev`](https://github.com/snogge/docker-emacs/blob/master/master/ubuntu/18.04/Dockerfile)
 - [`master-alpine`](https://github.com/snogge/docker-emacs/blob/master/master/alpine/3.9/Dockerfile)
 - [`master-alpine-dev`](https://github.com/snogge/docker-emacs/blob/master/master/alpine/3.9/Dockerfile)
+- [`master-alpine-ci`](https://github.com/snogge/docker-emacs/blob/master/master/alpine/3.9/Dockerfile)
 - [`27.0`, `27`](https://github.com/snogge/docker-emacs/blob/master/27.0/ubuntu/18.04/Dockerfile)
 - [`27.0-dev`, `27-dev`](https://github.com/snogge/docker-emacs/blob/master/27.0/ubuntu/18.04/Dockerfile)
 - [`27.0-alpine`, `27-alpine`](https://github.com/snogge/docker-emacs/blob/master/27.0/alpine/3.9/Dockerfile)
