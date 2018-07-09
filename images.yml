@@ -10,11 +10,11 @@
 #   branch: master
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/26+
-- tags: [master-alpine-dev]
-  branch: master
-  template: alpine/3.7
-  patches: alpine/3.7/patches/26+
-  target: dev
+# - tags: [master-alpine-dev]
+#   branch: master
+#   template: alpine/3.7
+#   patches: alpine/3.7/patches/26+
+#   target: dev
 - tags: [master-alpine-ci]
   branch: master
   template: alpine/3.7
@@ -32,11 +32,11 @@
 #   branch: emacs-26.1
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/26+
-- tags: [26.1-alpine-dev, 26-alpine-dev, alpine-dev]
-  branch: emacs-26.1
-  template: alpine/3.7
-  patches: alpine/3.7/patches/26+
-  target: dev
+# - tags: [26.1-alpine-dev, 26-alpine-dev, alpine-dev]
+#   branch: emacs-26.1
+#   template: alpine/3.7
+#   patches: alpine/3.7/patches/26+
+#   target: dev
 - tags: [26.1-alpine-ci, 26-alpine-ci, alpine-ci]
   branch: emacs-26.1
   template: alpine/3.7
@@ -54,11 +54,11 @@
 #   branch: emacs-25.3
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/25
-- tags: [25.3-alpine-dev, 25-alpine-dev]
-  branch: emacs-25.3
-  template: alpine/3.7
-  patches: alpine/3.7/patches/25
-  target: dev
+# - tags: [25.3-alpine-dev, 25-alpine-dev]
+#   branch: emacs-25.3
+#   template: alpine/3.7
+#   patches: alpine/3.7/patches/25
+#   target: dev
 - tags: [25.3-alpine-ci, 25-alpine-ci]
   branch: emacs-25.3
   template: alpine/3.7
@@ -76,11 +76,11 @@
 #   branch: emacs-25.2
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/25
-- tags: [25.2-alpine-dev]
-  branch: emacs-25.2
-  template: alpine/3.7
-  patches: alpine/3.7/patches/25
-  target: dev
+# - tags: [25.2-alpine-dev]
+#   branch: emacs-25.2
+#   template: alpine/3.7
+#   patches: alpine/3.7/patches/25
+#   target: dev
 - tags: [25.2-alpine-ci]
   branch: emacs-25.2
   template: alpine/3.7
