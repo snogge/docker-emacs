@@ -13,30 +13,33 @@ This project provides different docker images:
 
 # Tags
 
-- `master-alpine-dev` [(master/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
-- `master-alpine-ci` [(master/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
-- `26.1-alpine-dev`, `26-alpine-dev`, `alpine-dev` [(26.1/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/alpine/3.7/Dockerfile)
-- `25.3-alpine-dev`, `25-alpine-dev` [(25.3/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/3.7/Dockerfile)
-- `25.2-alpine-dev` [(25.2/alpine/3.7/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/alpine/3.7/Dockerfile)
-- `25.1-dev` [(25.1/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.1/ubuntu/18.04/Dockerfile)
-- `24.5-dev`, `24-dev` [(24.5/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.5/ubuntu/18.04/Dockerfile)
-- `24.4-dev` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
-- `24.3-dev` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
-- `23.4-dev`, `23-dev` [(23.4/ubuntu/12.04/bootstrap/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
+- `master-alpine-dev` [(master/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
+- `master-alpine-ci` [(master/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
+- `26.1-alpine-dev`, `26-alpine-dev`, `alpine-dev` [(26.1/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/26.1/alpine/3.7/Dockerfile)
+- `26.1-alpine-ci`, `26-alpine-ci`, `alpine-ci` [(26.1/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/26.1/alpine/3.7/Dockerfile)
+- `25.3-alpine-dev`, `25-alpine-dev` [(25.3/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.3/alpine/3.7/Dockerfile)
+- `25.3-alpine-ci`, `25-alpine-ci` [(25.3/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.3/alpine/3.7/Dockerfile)
+- `25.2-alpine-dev` [(25.2/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.2/alpine/3.7/Dockerfile)
+- `25.2-alpine-ci` [(25.2/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.2/alpine/3.7/Dockerfile)
+- `25.1-dev` [(25.1/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.1/ubuntu/18.04/Dockerfile)
+- `24.5-dev`, `24-dev` [(24.5/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.5/ubuntu/18.04/Dockerfile)
+- `24.4-dev` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
+- `24.3-dev` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
+- `23.4-dev`, `23-dev` [(23.4/ubuntu/12.04/bootstrap/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
 
 # Usage
 
 ## Console
 
 ``` shell
-docker run -it --rm silex/emacs
+docker run -it --rm olanilsson/emacs
 ```
 
 ## GUI
 
 ``` shell
 xhost +local:root # WARN: this comes with security issues
-docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix silex/emacs
+docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix olanilsson/emacs
 ```
 
 # Alternatives
