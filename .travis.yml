@@ -28,10 +28,10 @@ env:
   - DOCKER_IMAGES="25.2-alpine-dev 25.2-alpine-ci 25.2-alpine"
   - DOCKER_IMAGES="25.1-dev 25.1-ci 25.1"
   - DOCKER_IMAGES="24.5-dev 24.5-ci 24.5"
-  - DOCKER_IMAGES="24.4-dev 24.4"
-  - DOCKER_IMAGES="24.3-dev 24.3"
-  - DOCKER_IMAGES="24.2-dev 24.2"
-  - DOCKER_IMAGES="24.1-dev 24.1"
+  - DOCKER_IMAGES="24.4-dev 24.4-ci 24.4"
+  - DOCKER_IMAGES="24.3-dev 24.3-ci 24.3"
+  - DOCKER_IMAGES="24.2-dev 24.2-ci 24.2"
+  - DOCKER_IMAGES="24.1-dev 24.1-ci 24.1"
   - DOCKER_IMAGES="23.4-dev 23.4"
 
 install:
