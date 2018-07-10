@@ -124,6 +124,10 @@
   branch: emacs-24.4
   template: ubuntu/12.04
   target: dev
+- tags: [24.4-ci]
+  branch: emacs-24.4
+  template: ubuntu/12.04
+  target: ci
 
 # - tags: [24.3]
 #   branch: emacs-24.3
@@ -132,6 +136,10 @@
   branch: emacs-24.3
   template: ubuntu/12.04
   target: dev
+- tags: [24.3-ci]
+  branch: emacs-24.3
+  template: ubuntu/12.04
+  target: ci
 
 # - tags: [23.4, 23]
 #   branch: emacs-23.4
