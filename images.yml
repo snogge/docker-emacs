@@ -96,6 +96,11 @@
   template: ubuntu/18.04
   configure: CFLAGS=-no-pie
   target: dev
+- tags: [25.1-ci]
+  branch: emacs-25.1
+  template: ubuntu/18.04
+  configure: CFLAGS=-no-pie
+  target: ci
 
 # - tags: [24.5, 24]
 #   branch: emacs-24.5
@@ -106,6 +111,11 @@
   template: ubuntu/18.04
   configure: CFLAGS=-no-pie
   target: dev
+- tags: [24.5-ci, 24-ci]
+  branch: emacs-24.5
+  template: ubuntu/18.04
+  configure: CFLAGS=-no-pie
+  target: ci
 
 # - tags: [24.4]
 #   branch: emacs-24.4
