@@ -19,9 +19,7 @@ This project provides different docker images:
 - `25.2-alpine-ci` [(25.2/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.2/alpine/3.7/Dockerfile)
 - `25.1-ci` [(25.1/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.1/ubuntu/18.04/Dockerfile)
 - `24.5-ci`, `24-ci` [(24.5/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.5/ubuntu/18.04/Dockerfile)
-- `24.4-dev` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
 - `24.4-ci` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
-- `24.3-dev` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
 - `24.3-ci` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
 - `23.4-dev`, `23-dev` [(23.4/ubuntu/12.04/bootstrap/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
 

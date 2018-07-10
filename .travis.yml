@@ -14,8 +14,8 @@ env:
   - DOCKER_IMAGES="25.2-alpine-ci"
   - DOCKER_IMAGES="25.1-ci"
   - DOCKER_IMAGES="24.5-ci"
-  - DOCKER_IMAGES="24.4-dev 24.4-ci"
-  - DOCKER_IMAGES="24.3-dev 24.3-ci"
+  - DOCKER_IMAGES="24.4-ci"
+  - DOCKER_IMAGES="24.3-ci"
   - DOCKER_IMAGES="23.4-dev"
 
 install:
