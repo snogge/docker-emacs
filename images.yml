@@ -150,3 +150,8 @@
   template: ubuntu/12.04/bootstrap
   target: dev
   configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu
+- tags: [23.4-ci, 23-ci]
+  branch: emacs-23.4
+  template: ubuntu/12.04/bootstrap
+  target: ci
+  configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu
