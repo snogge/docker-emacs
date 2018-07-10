@@ -64,7 +64,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM ubuntu:18.04
+FROM ubuntu:18.04 as plain
 
 RUN apt-get update && \
     apt-get install -y \
@@ -100,5 +100,21 @@ ENV EMACS_VERSION="26.3"
 
 COPY --from=0 /root/.emacs.d /root/.emacs.d
 COPY --from=0 /usr/local /usr/local
+
+CMD ["emacs"]
+
+# ------------------------------------------------------------
+
+FROM plain as ci
+
+RUN apt-get update && \
+    apt-get install -y \
+	        bash \
+			git \
+			make \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV EMACS_BRANCH="emacs-26.3"
+ENV EMACS_VERSION="26.3"
 
 CMD ["emacs"]
