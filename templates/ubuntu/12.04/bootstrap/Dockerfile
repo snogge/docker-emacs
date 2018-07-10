@@ -48,7 +48,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM ubuntu:12.04
+FROM ubuntu:12.04 as plain
 
 RUN apt-get update && \
     apt-get install -y \
@@ -78,5 +78,21 @@ ENV EMACS_VERSION="{{VERSION}}"
 
 COPY --from=0 /root/.emacs.d /root/.emacs.d
 COPY --from=0 /usr/local /usr/local
+
+CMD ["emacs"]
+
+# ------------------------------------------------------------
+
+FROM plain as ci
+
+RUN apt-get update && \
+    apt-get install -y \
+	        bash \
+			git \
+			make \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV EMACS_BRANCH="{{BRANCH}}"
+ENV EMACS_VERSION="{{VERSION}}"
 
 CMD ["emacs"]

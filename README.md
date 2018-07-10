@@ -64,6 +64,7 @@ This project provides different docker images:
 - [`24.1-ci`](https://github.com/snogge/docker-emacs/blob/master/24.1/ubuntu/12.04/Dockerfile)
 - [`23.4`, `23`](https://github.com/snogge/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
 - [`23.4-dev`, `23-dev`](https://github.com/snogge/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
+- [`23.4-ci`, `23-ci`](https://github.com/snogge/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
 
 # Usage
 
