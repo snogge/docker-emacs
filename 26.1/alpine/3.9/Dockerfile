@@ -93,4 +93,12 @@ CMD ["emacs"]
 
 FROM plain as ci
 
-RUN apk add --no-cache git make
+RUN apk add --no-cache \
+		bash \
+		git \
+		make
+
+ENV EMACS_BRANCH="emacs-26.1"
+ENV EMACS_VERSION="26.1"
+
+CMD ["emacs"]
