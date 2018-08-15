@@ -95,6 +95,7 @@ FROM plain as ci
 
 RUN apk add --no-cache \
 		bash \
+		bzip2 \
 		git \
 		make
 
