@@ -83,8 +83,9 @@ CMD ["emacs"]
 FROM plain as ci
 
 RUN apk add --no-cache \
-        curl \
 		bash \
+		bzip2 \
+        curl \
 		git \
 		make
 
