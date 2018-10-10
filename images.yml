@@ -20,7 +20,11 @@
   template: alpine/3.7
   patches: alpine/3.7/patches/26+
   target: ci
-
+- tags: [master-alpine-xvfb]
+  branch: master
+  template: alpine/3.7
+  patches: alpine/3.7/patches/26+
+  target: xvfb
 # - tags: [26.1, 26, latest]
 #   branch: emacs-26.1
 #   template: ubuntu/18.04
@@ -42,6 +46,11 @@
   template: alpine/3.7
   patches: alpine/3.7/patches/26+
   target: ci
+- tags: [26.1-alpine-xvfb, 26-alpine-xvfb, alpine-xvfb]
+  branch: emacs-26.1
+  template: alpine/3.7
+  patches: alpine/3.7/patches/26+
+  target: xvfb
 
 # - tags: [25.3, 25]
 #   branch: emacs-25.3
@@ -64,6 +73,11 @@
   template: alpine/3.7
   patches: alpine/3.7/patches/25
   target: ci
+- tags: [25.3-alpine-xvfb, 25-alpine-xvfb]
+  branch: emacs-25.3
+  template: alpine/3.7
+  patches: alpine/3.7/patches/25
+  target: xvfb
 
 # - tags: [25.2]
 #   branch: emacs-25.2
