@@ -94,15 +94,3 @@ ENV EMACS_BRANCH="emacs-25.3"
 ENV EMACS_VERSION="25.3"
 
 CMD ["emacs"]
-
-# --------------------------------------------------------------
-
-FROM ci as xvfb
-
-RUN apk add --no-cache \
-        xvfb
-
-ENV EMACS_BRANCH="emacs-25.3"
-ENV EMACS_VERSION="25.3"
-
-CMD ["emacs"]
