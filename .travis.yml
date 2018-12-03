@@ -19,7 +19,7 @@ env:
   - DOCKER_IMAGES="26.3-dev 26.3"
   - DOCKER_IMAGES="26.3-alpine-dev 26.3-alpine"
   - DOCKER_IMAGES="26.2-dev 26.2"
-  - DOCKER_IMAGES="26.2-alpine-dev 26.2-alpine"
+  - DOCKER_IMAGES="26.2-alpine-dev 26.2-alpine-ci 26.2-alpine"
   - DOCKER_IMAGES="26.1-dev 26.1"
   - DOCKER_IMAGES="26.1-alpine-dev 26.1-alpine-ci 26.1-alpine"
   - DOCKER_IMAGES="25.3-dev 25.3"
