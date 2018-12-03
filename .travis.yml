@@ -9,6 +9,7 @@ cache:
 
 env:
   - DOCKER_IMAGES="master-alpine-ci"
+  - DOCKER_IMAGES="26.2-alpine-ci"
   - DOCKER_IMAGES="26.1-alpine-ci"
   - DOCKER_IMAGES="25.3-alpine-ci"
   - DOCKER_IMAGES="25.2-alpine-ci"
