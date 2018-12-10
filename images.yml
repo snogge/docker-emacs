@@ -19,7 +19,7 @@
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/26+
 #   target: dev
-- tags: [master-alpine-ci]
+- tags: [master-alpine-ci, master]
   version: master
   branch: master
   template: alpine/3.7
@@ -46,7 +46,7 @@
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/26+
 #   target: dev
-- tags: [26.2-alpine-ci]
+- tags: [26.2-alpine-ci, 26.2]
   version: 26.2
   branch: emacs-26.1.90
   template: alpine/3.7
@@ -73,7 +73,7 @@
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/26+
 #   target: dev
-- tags: [26.1-alpine-ci, 26-alpine-ci, alpine-ci]
+- tags: [26.1-alpine-ci, 26-alpine-ci, alpine-ci, 26.1]
   version: 26.1
   branch: emacs-26.1
   template: alpine/3.7
@@ -100,7 +100,7 @@
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/25
 #   target: dev
-- tags: [25.3-alpine-ci, 25-alpine-ci]
+- tags: [25.3-alpine-ci, 25-alpine-ci, 25.3]
   version: 25.3
   branch: emacs-25.3
   template: alpine/3.7
@@ -127,7 +127,7 @@
 #   template: alpine/3.7
 #   patches: alpine/3.7/patches/25
 #   target: dev
-- tags: [25.2-alpine-ci]
+- tags: [25.2-alpine-ci, 25.2]
   version: 25.2
   branch: emacs-25.2
   template: alpine/3.7
@@ -145,7 +145,7 @@
 #   template: ubuntu/18.04
 #   configure: CFLAGS=-no-pie
 #   target: dev
-- tags: [25.1-ci]
+- tags: [25.1-ci, 25.1]
   version: 25.1
   branch: emacs-25.1
   template: ubuntu/18.04
@@ -163,7 +163,7 @@
 #   template: ubuntu/18.04
 #   configure: CFLAGS=-no-pie
 #   target: dev
-- tags: [24.5-ci, 24-ci]
+- tags: [24.5-ci, 24.5, 24-ci]
   version: 24.5
   branch: emacs-24.5
   template: ubuntu/18.04
@@ -179,7 +179,7 @@
 #   branch: emacs-24.4
 #   template: ubuntu/12.04
 #   target: dev
-- tags: [24.4-ci]
+- tags: [24.4-ci, 24.4]
   version: 24.4
   branch: emacs-24.4
   template: ubuntu/12.04
@@ -194,7 +194,7 @@
 #   branch: emacs-24.3
 #   template: ubuntu/12.04
 #   target: dev
-- tags: [24.3-ci]
+- tags: [24.3-ci, 24.3]
   version: 24.3
   branch: emacs-24.3
   template: ubuntu/12.04
@@ -211,7 +211,7 @@
 #   template: ubuntu/12.04/bootstrap
 #   target: dev
 #   configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu
-- tags: [23.4-ci, 23-ci]
+- tags: [23.4-ci, 23-ci, 23.4]
   version: 23.4
   branch: emacs-23.4
   template: ubuntu/12.04/bootstrap

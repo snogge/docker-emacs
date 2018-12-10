@@ -13,16 +13,16 @@ This project provides different docker images:
 
 # Tags
 
-- `master-alpine-ci` [(master/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
-- `26.2-alpine-ci` [(26.2/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/26.2/alpine/3.7/Dockerfile)
-- `26.1-alpine-ci`, `26-alpine-ci`, `alpine-ci` [(26.1/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/26.1/alpine/3.7/Dockerfile)
-- `25.3-alpine-ci`, `25-alpine-ci` [(25.3/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.3/alpine/3.7/Dockerfile)
-- `25.2-alpine-ci` [(25.2/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.2/alpine/3.7/Dockerfile)
-- `25.1-ci` [(25.1/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.1/ubuntu/18.04/Dockerfile)
-- `24.5-ci`, `24-ci` [(24.5/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.5/ubuntu/18.04/Dockerfile)
-- `24.4-ci` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
-- `24.3-ci` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
-- `23.4-ci`, `23-ci` [(23.4/ubuntu/12.04/bootstrap/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
+- `master-alpine-ci`, `master` [(master/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/master/alpine/3.7/Dockerfile)
+- `26.2-alpine-ci`, `26.2` [(26.2/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/26.2/alpine/3.7/Dockerfile)
+- `26.1-alpine-ci`, `26-alpine-ci`, `alpine-ci`, `26.1` [(26.1/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/26.1/alpine/3.7/Dockerfile)
+- `25.3-alpine-ci`, `25-alpine-ci`, `25.3` [(25.3/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.3/alpine/3.7/Dockerfile)
+- `25.2-alpine-ci`, `25.2` [(25.2/alpine/3.7/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.2/alpine/3.7/Dockerfile)
+- `25.1-ci`, `25.1` [(25.1/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/25.1/ubuntu/18.04/Dockerfile)
+- `24.5-ci`, `24.5`, `24-ci` [(24.5/ubuntu/18.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.5/ubuntu/18.04/Dockerfile)
+- `24.4-ci`, `24.4` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
+- `24.3-ci`, `24.3` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
+- `23.4-ci`, `23-ci`, `23.4` [(23.4/ubuntu/12.04/bootstrap/Dockerfile)](https://github.com/snogge/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
 
 # Usage
 
