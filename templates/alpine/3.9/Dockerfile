@@ -1,4 +1,4 @@
-FROM alpine:3.7 as dev
+FROM alpine:3.9 as dev
 
 RUN apk add --no-cache \
         alsa-lib-dev \
@@ -31,20 +31,20 @@ RUN apk add --no-cache \
         openssh-client \
         pango-dev \
         paxmark \
+        python \
         texinfo \
         tiff-dev \
     && /bin/true
 
-ENV EMACS_BRANCH="emacs-26.1"
-ENV EMACS_VERSION="26.1"
+ENV EMACS_BRANCH="{{BRANCH}}"
+ENV EMACS_VERSION="{{VERSION}}"
 
 COPY source /opt/emacs/
-COPY patches /opt/emacs/patches
 
 RUN cd /opt/emacs && \
-    git apply patches/* && \
+    if [ -d patches ]; then git apply patches/*; fi && \
     ./autogen.sh && \
-    ./configure && \
+    ./configure{{CONFIGURE}} && \
 	make -j 8 install && \
 	find /usr/local/share -name \*.elc -print0 | xargs -0 touch
 
@@ -55,7 +55,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM alpine:3.7 as plain
+FROM alpine:3.9 as plain
 
 RUN apk add --no-cache \
         alsa-lib \
@@ -76,8 +76,8 @@ RUN apk add --no-cache \
         tiff \
     && /bin/true
 
-ENV EMACS_BRANCH="emacs-26.1"
-ENV EMACS_VERSION="26.1"
+ENV EMACS_BRANCH="{{BRANCH}}"
+ENV EMACS_VERSION="{{VERSION}}"
 
 COPY --from=dev /usr/local /usr/local
 
@@ -94,7 +94,7 @@ RUN apk add --no-cache \
 		git \
 		make
 
-ENV EMACS_BRANCH="emacs-26.1"
-ENV EMACS_VERSION="26.1"
+ENV EMACS_BRANCH="{{BRANCH}}"
+ENV EMACS_VERSION="{{VERSION}}"
 
 CMD ["emacs"]

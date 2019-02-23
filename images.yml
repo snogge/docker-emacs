@@ -11,46 +11,42 @@
 # - tags: [master-alpine]
 #   version: master
 #   branch: master
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/26+
+#   template: alpine/3.9
 # - tags: [master-alpine-dev]
 #   version: master
 #   branch: master
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/26+
+#   template: alpine/3.9
 #   target: dev
 - tags: [master-alpine-ci, master]
   version: master
   branch: master
-  template: alpine/3.7
-  patches: alpine/3.7/patches/26+
+  template: alpine/3.9
   target: ci
 
 # - tags: [26.2]
 #   version: 26.2
-#   branch: emacs-26.1.90
+#   branch: emacs-26.1.91
 #   template: ubuntu/18.04
 # - tags: [26.2-dev]
 #   version: 26.2
-#   branch: emacs-26.1.90
+#   branch: emacs-26.1.91
 #   template: ubuntu/18.04
 #   target: dev
 # - tags: [26.2-alpine]
 #   version: 26.2
-#   branch: emacs-26.1.90
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/26+
+#   branch: emacs-26.1.91
+#   template: alpine/3.9
+#   patches: alpine/3.9/patches/26+
 # - tags: [26.2-alpine-dev]
 #   version: 26.2
-#   branch: emacs-26.1.90
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/26+
+#   branch: emacs-26.1.91
+#   template: alpine/3.9
+#   patches: alpine/3.9/patches/26+
 #   target: dev
 - tags: [26.2-alpine-ci, 26.2]
   version: 26.2
-  branch: emacs-26.1.90
-  template: alpine/3.7
-  patches: alpine/3.7/patches/26+
+  branch: emacs-26.1.91
+  template: alpine/3.9
   target: ci
 
 # - tags: [26.1, 26, latest]
@@ -65,19 +61,16 @@
 # - tags: [26.1-alpine, 26-alpine, alpine]
 #   version: 26.1
 #   branch: emacs-26.1
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/26+
+#   template: alpine/3.9
 # - tags: [26.1-alpine-dev, 26-alpine-dev, alpine-dev]
 #   version: 26.1
 #   branch: emacs-26.1
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/26+
+#   template: alpine/3.9
 #   target: dev
 - tags: [26.1-alpine-ci, 26-alpine-ci, alpine-ci, 26.1]
   version: 26.1
   branch: emacs-26.1
-  template: alpine/3.7
-  patches: alpine/3.7/patches/26+
+  template: alpine/3.9
   target: ci
 
 # - tags: [25.3, 25]
@@ -92,19 +85,19 @@
 # - tags: [25.3-alpine, 25-alpine]
 #   version: 25.3
 #   branch: emacs-25.3
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/25
+#   template: alpine/3.9
+#   patches: alpine/3.9/patches/25
 # - tags: [25.3-alpine-dev, 25-alpine-dev]
 #   version: 25.3
 #   branch: emacs-25.3
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/25
+#   template: alpine/3.9
+#   patches: alpine/3.9/patches/25
 #   target: dev
 - tags: [25.3-alpine-ci, 25-alpine-ci, 25.3]
   version: 25.3
   branch: emacs-25.3
-  template: alpine/3.7
-  patches: alpine/3.7/patches/25
+  template: alpine/3.9
+  patches: alpine/3.9/patches/25
   target: ci
 
 # - tags: [25.2]
@@ -119,19 +112,19 @@
 # - tags: [25.2-alpine]
 #   version: 25.2
 #   branch: emacs-25.2
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/25
+#   template: alpine/3.9
+#   patches: alpine/3.9/patches/25
 # - tags: [25.2-alpine-dev]
 #   version: 25.2
 #   branch: emacs-25.2
-#   template: alpine/3.7
-#   patches: alpine/3.7/patches/25
+#   template: alpine/3.9
+#   patches: alpine/3.9/patches/25
 #   target: dev
 - tags: [25.2-alpine-ci, 25.2]
   version: 25.2
   branch: emacs-25.2
-  template: alpine/3.7
-  patches: alpine/3.7/patches/25
+  template: alpine/3.9
+  patches: alpine/3.9/patches/25
   target: ci
 
 # - tags: [25.1]
@@ -200,20 +193,50 @@
   template: ubuntu/12.04
   target: ci
 
+# - tags: [24.2]
+#   version: 24.2
+#   branch: emacs-24.2
+#   template: ubuntu/12.04
+# - tags: [24.2-dev]
+#   version: 24.2
+#   branch: emacs-24.2
+#   template: ubuntu/12.04
+#   target: dev
+- tags: [24.2-ci, 24.2]
+  version: 24.2
+  branch: emacs-24.2
+  template: ubuntu/12.04
+  target: ci
+
+# - tags: [24.1]
+#   version: 24.1
+#   branch: emacs-24.1
+#   template: ubuntu/12.04
+# - tags: [24.1-dev]
+#   version: 24.1
+#   branch: emacs-24.1
+#   template: ubuntu/12.04
+#   target: dev
+- tags: [24.1-ci, 24.1]
+  version: 24.1
+  branch: emacs-24.1
+  template: ubuntu/12.04
+  target: ci
+
 # - tags: [23.4, 23]
 #   version: 23.4
 #   branch: emacs-23.4
 #   template: ubuntu/12.04/bootstrap
-#   configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu
+#   configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu --with-x-toolkit=no
 # - tags: [23.4-dev, 23-dev]
 #   version: 23.4
 #   branch: emacs-23.4
 #   template: ubuntu/12.04/bootstrap
 #   target: dev
-#   configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu
+#   configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu --with-x-toolkit=no
 - tags: [23.4-ci, 23-ci, 23.4]
   version: 23.4
   branch: emacs-23.4
   template: ubuntu/12.04/bootstrap
   target: ci
-  configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu
+  configure: --with-crt-dir=/usr/lib/x86_64-linux-gnu --with-x-toolkit=no

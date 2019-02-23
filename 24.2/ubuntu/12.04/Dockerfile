@@ -1,53 +1,43 @@
-FROM ubuntu:18.04 as dev
+FROM ubuntu:12.04 as dev
 
 RUN apt-get update && \
     apt-get install -y \
             autoconf \
             automake \
-            autotools-dev \
             build-essential \
             curl \
-            dpkg-dev \
             git \
             gnupg \
             imagemagick \
             ispell \
-            libacl1-dev \
-            libasound2-dev \
-            libcanberra-gtk3-module \
+            libcanberra-gtk-module \
             libdbus-1-dev \
             libgif-dev \
-            libgnutls28-dev \
+            libgnutls-dev \
             libgpm-dev \
-            libgtk-3-dev \
+            libgtk2.0-dev \
             libjpeg-dev \
-            liblockfile-dev \
-            libm17n-dev \
-            libmagick++-6.q16-dev \
-            libncurses5-dev \
-            libotf-dev \
+            libmagick++-dev \
+            libncurses-dev \
             libpng-dev \
-            librsvg2-dev \
-            libselinux1-dev \
             libtiff-dev \
-            libxaw7-dev \
-            libxml2-dev \
+            libx11-dev \
+            libxpm-dev \
             openssh-client \
             python \
             texinfo \
-            xaw3dg-dev \
-            zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
-ENV EMACS_BRANCH="emacs-26.1.91"
-ENV EMACS_VERSION="26.2"
+ENV EMACS_BRANCH="emacs-24.2"
+ENV EMACS_VERSION="24.2"
 
 COPY source /opt/emacs
 
 RUN cd /opt/emacs && \
     ./autogen.sh && \
     ./configure && \
-    make -j 8 install
+    make install && \
+	find /usr/local/share -name \*.elc -print0 | xargs -0 touch
 
 ENV PATH="/root/.cask/bin:$PATH"
 RUN curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
@@ -56,7 +46,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM ubuntu:18.04
+FROM ubuntu:12.04 as plain
 
 RUN apt-get update && \
     apt-get install -y \
@@ -65,29 +55,43 @@ RUN apt-get update && \
             gpm \
             imagemagick \
             ispell \
-            libacl1 \
-            libasound2 \
-            libcanberra-gtk3-module \
-            libdbus-1-3 \
-            libgif7 \
-            libgnutls30 \
-            libgtk-3-0 \
+            libcanberra-gtk-module \
+            libgif4 \
+            libgnutls26 \
+            libgtk2.0-0 \
             libjpeg8 \
-            libm17n-0 \
-            libpng16-16 \
-            librsvg2-2 \
+            libmagick++4 \
+            libncurses5 \
+            libpng12-0 \
             libsm6 \
-            libtiff5 \
-            libx11-xcb1 \
-            libxml2 \
+            libtiff4 \
+            libx11-6 \
             libxpm4 \
             openssh-client \
             texinfo \
     && rm -rf /var/lib/apt/lists/*
 
-ENV EMACS_BRANCH="emacs-26.1.91"
-ENV EMACS_VERSION="26.2"
+ENV EMACS_BRANCH="emacs-24.2"
+ENV EMACS_VERSION="24.2"
 
 COPY --from=0 /usr/local /usr/local
+
+CMD ["emacs"]
+
+# ------------------------------------------------------------
+
+FROM plain as ci
+
+RUN apt-get update && \
+    apt-get install -y \
+	        bash \
+			bzip2 \
+			curl \
+			git \
+			make \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV EMACS_BRANCH="emacs-24.2"
+ENV EMACS_VERSION="24.2"
 
 CMD ["emacs"]

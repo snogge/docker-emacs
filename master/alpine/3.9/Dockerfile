@@ -1,4 +1,4 @@
-FROM alpine:3.7 as dev
+FROM alpine:3.9 as dev
 
 RUN apk add --no-cache \
         alsa-lib-dev \
@@ -31,6 +31,7 @@ RUN apk add --no-cache \
         openssh-client \
         pango-dev \
         paxmark \
+        python \
         texinfo \
         tiff-dev \
     && /bin/true
@@ -39,10 +40,9 @@ ENV EMACS_BRANCH="master"
 ENV EMACS_VERSION="master"
 
 COPY source /opt/emacs/
-COPY patches /opt/emacs/patches
 
 RUN cd /opt/emacs && \
-    git apply patches/* && \
+    if [ -d patches ]; then git apply patches/*; fi && \
     ./autogen.sh && \
     ./configure && \
 	make -j 8 install && \
@@ -55,7 +55,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM alpine:3.7 as plain
+FROM alpine:3.9 as plain
 
 RUN apk add --no-cache \
         alsa-lib \
