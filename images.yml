@@ -25,27 +25,27 @@
 
 # - tags: [26.2]
 #   version: 26.2
-#   branch: emacs-26.1.91
+#   branch: emacs-26.1.92
 #   template: ubuntu/18.04
 # - tags: [26.2-dev]
 #   version: 26.2
-#   branch: emacs-26.1.91
+#   branch: emacs-26.1.92
 #   template: ubuntu/18.04
 #   target: dev
 # - tags: [26.2-alpine]
 #   version: 26.2
-#   branch: emacs-26.1.91
+#   branch: emacs-26.1.92
 #   template: alpine/3.9
 #   patches: alpine/3.9/patches/26+
 # - tags: [26.2-alpine-dev]
 #   version: 26.2
-#   branch: emacs-26.1.91
+#   branch: emacs-26.1.92
 #   template: alpine/3.9
 #   patches: alpine/3.9/patches/26+
 #   target: dev
 - tags: [26.2-alpine-ci, 26.2]
   version: 26.2
-  branch: emacs-26.1.91
+  branch: emacs-26.1.92
   template: alpine/3.9
   target: ci
 
