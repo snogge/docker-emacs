@@ -49,8 +49,7 @@ COPY source /opt/emacs
 RUN cd /opt/emacs && \
     ./autogen.sh && \
     ./configure CFLAGS=-no-pie && \
-    make -j 8 install && \
-	find /usr/local/share -name \*.elc -print0 | xargs -0 touch
+    make -j 8 install
 
 ENV PATH="/root/.cask/bin:$PATH"
 RUN curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
