@@ -7,10 +7,6 @@ cache:
   directories:
     - $HOME/cache
 
-branches:
-  only:
-    - master
-
 env:
 {{ENV}}
 
