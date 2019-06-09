@@ -7,6 +7,10 @@ cache:
   directories:
     - $HOME/cache
 
+branches:
+  only:
+    - master
+
 env:
   - DOCKER_IMAGES="master-alpine-ci"
   - DOCKER_IMAGES="26.2-alpine-ci"

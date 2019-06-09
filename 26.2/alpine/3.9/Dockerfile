@@ -36,7 +36,7 @@ RUN apk add --no-cache \
         tiff-dev \
     && /bin/true
 
-ENV EMACS_BRANCH="emacs-26.1.92"
+ENV EMACS_BRANCH="emacs-26.2"
 ENV EMACS_VERSION="26.2"
 
 COPY source /opt/emacs/
@@ -44,7 +44,7 @@ COPY source /opt/emacs/
 RUN cd /opt/emacs && \
     if [ -d patches ]; then git apply patches/*; fi && \
     ./autogen.sh && \
-    ./configure && \
+    ./configure --with-modules && \
     make -j 8 && \
     make install
 
@@ -76,7 +76,7 @@ RUN apk add --no-cache \
         tiff \
     && /bin/true
 
-ENV EMACS_BRANCH="emacs-26.1.92"
+ENV EMACS_BRANCH="emacs-26.2"
 ENV EMACS_VERSION="26.2"
 
 COPY --from=dev /usr/local /usr/local
@@ -93,7 +93,7 @@ RUN apk add --no-cache \
 		git \
 		make
 
-ENV EMACS_BRANCH="emacs-26.1.92"
+ENV EMACS_BRANCH="emacs-26.2"
 ENV EMACS_VERSION="26.2"
 
 CMD ["emacs"]
