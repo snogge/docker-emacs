@@ -73,6 +73,12 @@
   template: alpine/3.9
   configure: --with-modules
   target: dev
+- tags: [26.3-alpine-ci, 26-alpine-ci, alpine-ci]
+  version: 26.3
+  branch: emacs-26.3
+  template: alpine/3.9
+  configure: --with-modules
+  target: ci
 
 - tags: [26.2]
   version: 26.2
@@ -96,7 +102,7 @@
   template: alpine/3.9
   configure: --with-modules
   target: dev
-- tags: [26.2-alpine-ci, 26-alpine-ci, alpine-ci]
+- tags: [26.2-alpine-ci]
   version: 26.2
   branch: emacs-26.2
   template: alpine/3.9
