@@ -91,7 +91,8 @@ RUN apk add --no-cache \
 		bash \
 		bzip2 \
 		git \
-		make
+		make \
+		tar
 
 ENV EMACS_BRANCH="emacs-26.1"
 ENV EMACS_VERSION="26.1"
