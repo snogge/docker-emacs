@@ -9,6 +9,9 @@ This project provides different docker images:
   tools such as [Cask](https://cask.readthedocs.io), [git](https://git-scm.com) and [Python](https://www.python.org).
 - The `-alpine` variants (~200MB) follow the same logic as the main images but are based on
   [Alpine Linux](https://alpinelinux.org).
+- The `-ci` and `-alpine-ci` variants are based on the main and
+  `'alpine' images respectively.  They add some basic tools to make CI
+  easier, e.g. bash, bzip2, git, make, and tar.
 
 # Tags
 
