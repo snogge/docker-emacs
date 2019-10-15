@@ -79,7 +79,7 @@ RUN apk add --no-cache \
 ENV EMACS_BRANCH="{{BRANCH}}"
 ENV EMACS_VERSION="{{VERSION}}"
 
-COPY --from=dev /usr/local /usr/local
+COPY --from=0 /usr/local /usr/local
 
 CMD ["emacs"]
 
