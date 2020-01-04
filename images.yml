@@ -28,23 +28,46 @@
   configure: --with-modules
   target: ci
 
-- tags: [26.3]
+- tags: [27.0, 27]
+  version: 27.0
+  branch: emacs-27
+  template: ubuntu/18.04
+  configure: --with-modules
+- tags: [27.0-dev, 27-dev]
+  version: 27.0
+  branch: emacs-27
+  template: ubuntu/18.04
+  configure: --with-modules
+  target: dev
+- tags: [27.0-alpine, 27-alpine]
+  version: 27.0
+  branch: emacs-27
+  template: alpine/3.9
+  configure: --with-modules
+- tags: [27.0-alpine-dev, 27-alpine-dev]
+  version: 27.0
+  branch: emacs-27
+  template: alpine/3.9
+  configure: --with-modules
+  target: dev
+
+- tags: [26.3, 26, latest]
   version: 26.3
   branch: emacs-26.3
   template: ubuntu/18.04
   configure: --with-modules
-- tags: [26.3-dev]
+- tags: [26.3-dev, 26-dev, dev]
   version: 26.3
   branch: emacs-26.3
   template: ubuntu/18.04
   configure: --with-modules
   target: dev
-- tags: [26.3-alpine]
+- tags: [26.3-alpine, 26-alpine, alpine]
   version: 26.3
   branch: emacs-26.3
   template: alpine/3.9
   configure: --with-modules
-- tags: [26.3-alpine-dev]
+- tags: [26.3-alpine-dev, 26-alpine-dev, alpine-dev]
   version: 26.3
   branch: emacs-26.3
   template: alpine/3.9
@@ -57,23 +80,23 @@
   configure: --with-modules
   target: ci
 
-- tags: [26.2, 26, latest]
+- tags: [26.2]
   version: 26.2
   branch: emacs-26.2
   template: ubuntu/18.04
   configure: --with-modules
-- tags: [26.2-dev, 26-dev, dev]
+- tags: [26.2-dev]
   version: 26.2
   branch: emacs-26.2
   template: ubuntu/18.04
   configure: --with-modules
   target: dev
-- tags: [26.2-alpine, 26-alpine, alpine]
+- tags: [26.2-alpine]
   version: 26.2
   branch: emacs-26.2
   template: alpine/3.9
   configure: --with-modules
-- tags: [26.2-alpine-dev, 26-alpine-dev, alpine-dev]
+- tags: [26.2-alpine-dev]
   version: 26.2
   branch: emacs-26.2
   template: alpine/3.9

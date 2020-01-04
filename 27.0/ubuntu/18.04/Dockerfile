@@ -1,42 +1,55 @@
-FROM ubuntu:12.04 as dev
+FROM ubuntu:18.04 as dev
 
 RUN apt-get update && \
     apt-get install -y \
             autoconf \
             automake \
+            autotools-dev \
             build-essential \
             curl \
+            dpkg-dev \
             git \
             gnupg \
             imagemagick \
             ispell \
-            libcanberra-gtk-module \
+            libacl1-dev \
+            libasound2-dev \
+            libcanberra-gtk3-module \
+            liblcms2-dev \
             libdbus-1-dev \
             libgif-dev \
-            libgnutls-dev \
+            libgnutls28-dev \
             libgpm-dev \
-            libgtk2.0-dev \
+            libgtk-3-dev \
+            libjansson-dev \
             libjpeg-dev \
-            libmagick++-dev \
-            libncurses-dev \
+            liblockfile-dev \
+            libm17n-dev \
+            libmagick++-6.q16-dev \
+            libncurses5-dev \
+            libotf-dev \
             libpng-dev \
+            librsvg2-dev \
+            libselinux1-dev \
             libtiff-dev \
-            libx11-dev \
-            libxpm-dev \
+            libxaw7-dev \
+            libxml2-dev \
             openssh-client \
             python \
             texinfo \
+            xaw3dg-dev \
+            zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
-ENV EMACS_BRANCH="emacs-24.1"
-ENV EMACS_VERSION="24.1"
+ENV EMACS_BRANCH="emacs-27"
+ENV EMACS_VERSION="27.0"
 
 COPY source /opt/emacs
 
 RUN cd /opt/emacs && \
     ./autogen.sh && \
-    ./configure && \
-    make && \
+    ./configure --with-modules && \
+    make -j 8 && \
     make install
 
 ENV PATH="/root/.cask/bin:$PATH"
@@ -51,7 +64,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM ubuntu:12.04 as plain
+FROM ubuntu:18.04
 
 RUN apt-get update && \
     apt-get install -y \
@@ -60,43 +73,32 @@ RUN apt-get update && \
             gpm \
             imagemagick \
             ispell \
-            libcanberra-gtk-module \
-            libgif4 \
-            libgnutls26 \
-            libgtk2.0-0 \
+            libacl1 \
+            libasound2 \
+            libcanberra-gtk3-module \
+            liblcms2-2 \
+            libdbus-1-3 \
+            libgif7 \
+            libgnutls30 \
+            libgtk-3-0 \
+            libjansson4 \
             libjpeg8 \
-            libmagick++4 \
-            libncurses5 \
-            libpng12-0 \
+            libm17n-0 \
+            libpng16-16 \
+            librsvg2-2 \
             libsm6 \
-            libtiff4 \
-            libx11-6 \
+            libtiff5 \
+            libx11-xcb1 \
+            libxml2 \
             libxpm4 \
             openssh-client \
             texinfo \
     && rm -rf /var/lib/apt/lists/*
 
-ENV EMACS_BRANCH="emacs-24.1"
-ENV EMACS_VERSION="24.1"
+ENV EMACS_BRANCH="emacs-27"
+ENV EMACS_VERSION="27.0"
 
 COPY --from=0 /root/.emacs.d /root/.emacs.d
 COPY --from=0 /usr/local /usr/local
-
-CMD ["emacs"]
-
-# ------------------------------------------------------------
-
-FROM plain as ci
-
-RUN apt-get update && \
-    apt-get install -y \
-	        bash \
-			bzip2 \
-			git \
-			make \
-    && rm -rf /var/lib/apt/lists/*
-
-ENV EMACS_BRANCH="emacs-24.1"
-ENV EMACS_VERSION="24.1"
 
 CMD ["emacs"]

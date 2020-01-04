@@ -36,8 +36,8 @@ RUN apk add --no-cache \
         tiff-dev \
     && /bin/true
 
-ENV EMACS_BRANCH="emacs-26.2.90"
-ENV EMACS_VERSION="26.3"
+ENV EMACS_BRANCH="emacs-27"
+ENV EMACS_VERSION="27.0"
 
 COPY source /opt/emacs/
 
@@ -60,7 +60,7 @@ CMD ["emacs"]
 
 # ------------------------------------------------------------
 
-FROM alpine:3.9 as plain
+FROM alpine:3.9
 
 RUN apk add --no-cache \
         alsa-lib \
@@ -81,26 +81,10 @@ RUN apk add --no-cache \
         tiff \
     && /bin/true
 
-ENV EMACS_BRANCH="emacs-26.2.90"
-ENV EMACS_VERSION="26.3"
+ENV EMACS_BRANCH="emacs-27"
+ENV EMACS_VERSION="27.0"
 
 COPY --from=0 /root/.emacs.d /root/.emacs.d
 COPY --from=0 /usr/local /usr/local
-
-CMD ["emacs"]
-
-# --------------------------------------------------------------
-
-FROM plain as ci
-
-RUN apk add --no-cache \
-		bash \
-		bzip2 \
-		git \
-		make \
-		tar
-
-ENV EMACS_BRANCH="emacs-26.2.90"
-ENV EMACS_VERSION="26.3"
 
 CMD ["emacs"]
